@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meus Links</title>
+  <meta name="description" content="Todos os meus links em um só lugar." />
+
+  <!-- Fonte opcional do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===============================
+       CONFIGURAÇÃO VISUAL RÁPIDA
+       Troque as cores aqui se quiser
+    =============================== */
+    :root {
+      --bg: #070707;
+      --card: rgba(255, 255, 255, 0.06);
+      --card-border: rgba(255, 255, 255, 0.12);
+      --text: #ffffff;
+      --muted: #a7a7a7;
+      --accent: #ffffff;
+      --button: #ffffff;
+      --button-text: #050505;
+      --button-hover: #dcdcdc;
+      --shadow: rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Inter', Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(255, 255, 255, 0.12), transparent 32%),
+        linear-gradient(180deg, #111111 0%, var(--bg) 45%, #000000 100%);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 28px 16px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 440px;
+    }
+
+    .profile-card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      box-shadow: 0 24px 80px var(--shadow);
+      backdrop-filter: blur(18px);
+      border-radius: 30px;
+      padding: 26px;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(255, 255, 255, 0.18);
+      background: #1b1b1b;
+      margin-bottom: 16px;
+    }
+
+    .logo-placeholder {
+      width: 104px;
+      height: 104px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      background: #fff;
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 32px;
+      letter-spacing: -1px;
+      border: 3px solid rgba(255, 255, 255, 0.18);
+    }
+
+    h1 {
+      font-size: 28px;
+      line-height: 1.1;
+      letter-spacing: -0.8px;
+      margin-bottom: 8px;
+    }
+
+    .username {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .bio {
+      color: #d8d8d8;
+      font-size: 15px;
+      line-height: 1.55;
+      margin-bottom: 22px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .link-button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 14px 18px;
+      border-radius: 18px;
+      background: var(--button);
+      color: var(--button-text);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      transition: transform 0.18s ease, background 0.18s ease, opacity 0.18s ease;
+    }
+
+    .link-button:hover {
+      transform: translateY(-2px);
+      background: var(--button-hover);
+    }
+
+    .link-button.secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .link-button.secondary:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .footer {
+      color: #777;
+      font-size: 12px;
+      text-align: center;
+      margin-top: 18px;
+    }
+
+    .footer a {
+      color: #aaa;
+      text-decoration: none;
+    }
+
+    @media (max-width: 420px) {
+      .profile-card {
+        padding: 22px;
+        border-radius: 24px;
+      }
+
+      h1 {
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="profile-card">
+
+      <!-- OPÇÃO 1: logo com texto. Troque "AB" pelo seu nome/marca -->
+      <!-- <div class="logo-placeholder">AB</div> -->
+
+      <!-- OPÇÃO 2: foto/logo em imagem.
+           Para usar, apague a div acima e descomente a linha abaixo.
+           Coloque sua imagem na mesma pasta com o nome logo.png
+      -->
+       <img class="avatar" src="logo.png" alt="Foto de perfil" />
+
+      <!-- EDITE AQUI -->
+      <h1>27TRACKS</h1>
+      <p class="username">@27trks</p>
+      <p class="bio">
+        Gravadora Undergroud.
+      </p>
+
+      <div class="links">
+        <!-- Troque o href="#" pelo link real -->
+        <!-- <a class="link-button" href="https://wa.me/5500000000000" target="_blank" rel="noopener">
+          Chamar no WhatsApp
+        </a> -->
+
+        <a class="link-button secondary" href="https://instagram.com/27trks" target="_blank" rel="noopener">
+          Instagram
+        </a>
+
+        <a class="link-button secondary" href="https://youtube.com/" target="_blank" rel="noopener">
+          YouTube
+        </a>
+
+        <!-- <a class="link-button secondary" href="https://beatstars.com/" target="_blank" rel="noopener">
+          Comprar Beats 
+        </a> -->
+
+        <!-- <a class="link-button secondary" href="#" target="_blank" rel="noopener">
+          Catálogo / Loja 
+        </a> -->
+      </div>
+    </section>
+
+    <p class="footer">
+      © <span id="year"></span> 27tracks. Todos os direitos reservados.
+    </p>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
